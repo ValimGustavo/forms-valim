@@ -7,6 +7,13 @@
       </div>
 
       <div class="form-group">
+        <label for='superPower'>Power</label>
+        <select id='superPower' class="form-control" required>
+          <option *ngFor='let power of powers' [value]="power">{{power}}</option>
+        </select>
+      </div>
+
+      <div class="form-group">
         <label for="alterEgo">Alter Ego</label>
         <input type="text" class="form-control" id="alterEgo">
       </div>
