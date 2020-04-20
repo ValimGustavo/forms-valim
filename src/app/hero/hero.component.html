@@ -3,20 +3,19 @@
     <form #heroForm="ngForm">
       <div class="form-group">
         <label for="name">Name</label>        
-        <input [(ngModel)]="model.name" name='name' type="text" class="form-control" id="name" required>
+        <input #spy [(ngModel)]="model.name" name='name' type="text" class="form-control" id="name" required>
       </div>
-      
-      
+      {{spy.className}}
       <div class="form-group">
         <label for='superPower'>Power</label>
-        <select id='superPower' class="form-control" required>
+        <select [(ngModel)]="model.power"  name="power" id='superPower' class="form-control" required>
           <option *ngFor='let power of powers' [value]="power">{{power}}</option>
         </select>
       </div>
 
       <div class="form-group">
         <label for="alterEgo">Alter Ego</label>
-        <input type="text" class="form-control" id="alterEgo">
+        <input [(ngModel)]="model.alterEgo" name="alterEgo" type="text" class="form-control" id="alterEgo">
       </div>
 
       <button type="submit" class="btn btn-success">Submit</button>
