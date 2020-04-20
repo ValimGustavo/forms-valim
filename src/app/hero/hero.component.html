@@ -1,11 +1,12 @@
 <div class="container">
     <h1>Hero Form</h1>
-    <form>
+    <form #heroForm="ngForm">
       <div class="form-group">
-        <label for="name">Name</label>
-        <input type="text" class="form-control" id="name" required>
+        <label for="name">Name</label>        
+        <input [(ngModel)]="model.name" name='name' type="text" class="form-control" id="name" required>
       </div>
-
+      
+      
       <div class="form-group">
         <label for='superPower'>Power</label>
         <select id='superPower' class="form-control" required>
